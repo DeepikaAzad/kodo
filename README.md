@@ -3,8 +3,6 @@
 System Requirements: Node 8.x+
 
 ### Technology
-
-To access the API:
 * Express
 * MySQL 5.7
 
@@ -39,6 +37,12 @@ npm install
 node index.js
 ```
 
+## To run the test
+
+```
+npm run test
+```
+
 ## To access the API:
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7c564623edfe3ad6f149)
@@ -46,8 +50,8 @@ node index.js
 ### Feauters
 
 - Pagination
-- Sorting
-- Column filtering - Where
+- Implemented sorting by `name` and `dateLastEdited`.
+- Support exact match when the query contains a phrase within double quotes
 - Code is very modular.
 
 ## Pagination
@@ -90,13 +94,12 @@ eg: sorts descending by column1
 eg: sorts ascending by column1 and descending by column2
 
 ## Column filtering / Fields
+```
+/post?search=the king
+```
 - strict search -- 
 ```
-/post?search="the Lion king"
-```
-- lazy search -- 
-```
-/post?search=the Lion king
+/post?search="the king"
 ```
 
 ### Reference
