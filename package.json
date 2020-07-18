@@ -1,0 +1,19 @@
+{
+  "name": "kodo",
+  "version": "1.0.0",
+  "description": "Implementiom of  search and sort , with pagination.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha --timeout=10000 --exit"
+  },
+  "author": "Deepika",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mocha": "^8.0.1",
+    "mysql": "^2.18.1",
+    "sequelize": "^6.3.3"
+  }
+}
