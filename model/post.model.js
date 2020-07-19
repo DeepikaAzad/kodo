@@ -4,12 +4,12 @@ class Post {
 
 	/**
 	 * @param {string} query Pass Sql query with pagination filtering and soring.
-	 * @returns {object} return the meta for pagination
+	 *
+	 * @returns {object} Return the meta for pagination
 	 */
-	getPaginatedPosts(query) {
+	getPaginatedPost(query) {
 		return new Promise((resolve, reject) => {
 			try {
-				const totalCountQuery = "SELECT FOUND_ROWS() as count;";
 				connection.getConnection((error, conn) => {
 					if (error) {
 						throw error;
@@ -21,7 +21,7 @@ class Post {
 						}
 
 						const rows = result;
-						conn.query(totalCountQuery, (error, totalCountQueryResponse) => {
+						conn.query("SELECT FOUND_ROWS() as count;", (error, totalCountQueryResponse) => {
 							if (error) {
 								conn.release();
 								throw error;
