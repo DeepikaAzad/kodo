@@ -126,11 +126,3 @@ eg: sorts ascending by column1 and descending by column2
     ```
     /post?search="the king"
     ```
-
-Please feel free to contact me for any queries.
-
-#### Contact Details
-
-* Deepika Azad
-* azaddeepika05@gmail.com
-* +91 9783839582‬
