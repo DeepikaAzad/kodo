@@ -21,6 +21,7 @@ class Post {
 						}
 
 						const rows = result;
+						// To get the filtered row count without running the select statement again.
 						conn.query("SELECT FOUND_ROWS() as count;", (error, totalCountQueryResponse) => {
 							if (error) {
 								conn.release();

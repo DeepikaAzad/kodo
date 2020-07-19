@@ -1,7 +1,7 @@
 const QueryBuilder = require("../service/queryBuilder");
 
 // Retrieve all Post from the database.
-exports.getPost = async (request, response) => {
+exports.getPosts = async (request, response) => {
 	try {
 		const queryBuilder = new QueryBuilder();
 		const result = await queryBuilder.getPaginatedPost(request.query);
