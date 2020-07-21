@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const QueryBuilder = require('../service/sqlQuery');
+const QueryBuilder = require('../service/queryBuilder');
 
 describe('Build SQL query', async() => {
 	it('should return an paginate object.', async () => {
