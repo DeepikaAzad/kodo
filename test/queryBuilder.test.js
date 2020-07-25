@@ -14,7 +14,8 @@ describe('Build SQL query', async() => {
 		assert.equal(meta.currentPage, 1);
 		assert.equal(meta.pageSize, 10);
 		assert.equal(meta.pageCount, 10);
-	})
+	});
+
 	it('should return strict serach query', async () => {
 		const queryBuilder = new QueryBuilder();
 		const queryParams = {
@@ -25,5 +26,5 @@ describe('Build SQL query', async() => {
 		assert.equal(meta.currentPage, 1);
 		assert.equal(meta.pageSize, 1);
 		assert.equal(meta.pageCount, 1);
-	})
-})
+	});
+});

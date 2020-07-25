@@ -7,10 +7,12 @@ describe('Sorting', () => {
 		const query = orderby("name");
 		assert.equal(query, " order by name ASC ");
 		done();
-	})
+	});
+
 	it('should return descending order sql query', done => {
 		const query = orderby("-dateLastEdited");
 		assert.equal(query, " order by dateLastEdited DESC ");
 		done();
-	})
+	});
+	
 })

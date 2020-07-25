@@ -7,8 +7,9 @@ describe('Paginator', () => {
 		const { limit, offset } = calculateLimitAndOffset(2, 10);
 		assert.equal(limit, 10);
 		assert.equal(offset, 10);
-		done()
-	})
+		done();
+	});
+
 	it('should paginate an array and return pagination info', done => {
 		const count = data.length;
 		const { limit, offset } = calculateLimitAndOffset(2);
@@ -19,5 +20,5 @@ describe('Paginator', () => {
 		assert.equal(meta.pageSize, 20);
 		assert.equal(meta.pageCount, 5);
 		done();
-	})
-})
+	});
+});

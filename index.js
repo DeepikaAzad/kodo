@@ -1,16 +1,19 @@
 const express = require("express");
+const app = express();
 const bodyParser = require("body-parser");
 require("dotenv").config();
 
-const app = express();
+// Initial database migration.
+const db = require("./model/index.js");
+db.migrateDatabase();
 
-// parse requests of content-type - application/json
+// Parse requests of content-type - application/json
 app.use(bodyParser.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// simple route
+// Simple route
 app.get("/", (req, res) => {
 	res.json({ message: "Service is running....." });
 });
